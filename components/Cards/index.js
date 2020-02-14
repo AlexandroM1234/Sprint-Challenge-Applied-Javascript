@@ -49,13 +49,13 @@ function cardCreator(objInfo){
 
 }
 
-const placeCards = document.querySelector('.cards-container')
+// const placeCards = document.querySelector('.cards-container')
 
-axios.get('https://lambda-times-backend.herokuapp.com/articles').then(response=>{
-    const arrayinfo =response.data.articles;
-    // console.log(arrayinfo)
-    for (const Arrays in arrayinfo){
-        console.log(arrayinfo[Arrays][1]["headline"])
-    }
+// axios.get('https://lambda-times-backend.herokuapp.com/articles').then(response=>{
+//     const arrayinfo =response.data.articles;
+//     // console.log(arrayinfo)
+//     for (const Arrays in arrayinfo){
+//         console.log(arrayinfo[Arrays][1]["headline"])
+//     }
 
-})
+// })
