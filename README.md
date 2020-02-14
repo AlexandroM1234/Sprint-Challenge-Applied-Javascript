@@ -30,13 +30,23 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the DOM?
 
+What the browser gets from code
+
 2. What is an event?
+
+Is an object and can be a click doubleclick etc.
 
 3. What is an event listener?
 
+listens for an event and when the event is heard it does something on the DOM
+
 4. Why would we convert a NodeList into an Array?
 
+So you can use all Array Methods instead of some on NodeLists
+
 5. What is a component?
+
+Skeleton code that we can fill in with different information
 
 ### Git Set up
 
