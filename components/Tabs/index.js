@@ -18,13 +18,13 @@ function tabCreator(infoObject){
     return topic;
 }
 
-const domTopics =  document.querySelector('.topics')
+// const domTopics =  document.querySelector('.topics')
 
-axios.get('https://lambda-times-backend.herokuapp.com/topics').then(response=>{// this is an object
-    console.log(response.data.topics)
-    let objectArray= response.data.topics
-    objectArray.forEach(element=>{
-        const newTopic = tabCreator(objectArray)
-        domTopics.appendChild(newTopic)
-    })
-})
+// axios.get('https://lambda-times-backend.herokuapp.com/topics').then(response=>{// this is an object
+//     console.log(response.data.topics)
+//     let objectArray= response.data.topics
+//     objectArray.forEach(element=>{
+//         const newTopic = tabCreator(objectArray)
+//         domTopics.appendChild(newTopic)
+//     })
+// })

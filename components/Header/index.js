@@ -27,11 +27,16 @@ function Header() {
     headContainer.appendChild(title);
     headContainer.appendChild(temp);
 
+    //content
+    date.textContent = 'SMARCH 28,2019';
+    title.textContent = 'Lambda Times';
+    temp.textContent = '98';
+
     return headContainer;
 
 }
 
 
-const headParent = document.querySelector('.head-container');
+const headParent = document.querySelector('.header-container');
 
 headParent.appendChild(Header());
