@@ -21,6 +21,7 @@ function cardCreator(objInfo){
     //elements
     const mainContainer = document.createElement('div');
     const headlineContainer = document.createElement('div');
+
     const authorContainer = document.createElement('div');
     const imgContainer = document.createElement('div');
     const img = document.createElement('img');
@@ -42,20 +43,43 @@ function cardCreator(objInfo){
     imgContainer.appendChild(authorName)
 
     // what everything is
+ 
+    headlineContainer.textContent =objInfo["headline"];
+    img.src = objInfo.authorPhoto;
+    authorName.textContent = objInfo.authorName;
 
-    img.src = objInfo.authorphoto;
-
+    // console.log(headlineContainer)
+    // console.log(objInfo)
     return mainContainer
-
 }
 
-// const placeCards = document.querySelector('.cards-container')
+const placeCards = document.querySelector('.cards-container')
 
-// axios.get('https://lambda-times-backend.herokuapp.com/articles').then(response=>{
-//     const arrayinfo =response.data.articles;
-//     // console.log(arrayinfo)
-//     for (const Arrays in arrayinfo){
-//         console.log(arrayinfo[Arrays][1]["headline"])
-//     }
+axios.get('https://lambda-times-backend.herokuapp.com/articles').then(response=>{
+    const jsArray=response.data.articles.javascript;
+    const boostrap=response.data.articles.bootstrap;
+    const tech =response.data.articles.technology;
+    const jquery =response.data.articles.jquery;
+    const node = response.data.articles.node
 
-// })
+    jsArray.forEach(element=>{
+        const makeCard = cardCreator(element)
+        placeCards.appendChild(makeCard)
+    });
+    boostrap.forEach(element=>{
+        const makeCard = cardCreator(element)
+        placeCards.appendChild(makeCard)
+    });
+    tech.forEach(element=>{
+        const makeCard = cardCreator(element)
+        placeCards.appendChild(makeCard)
+    });
+    jquery.forEach(element=>{
+        const makeCard = cardCreator(element)
+        placeCards.appendChild(makeCard)
+    });
+    node.forEach(element=>{
+        const makeCard = cardCreator(element)
+        placeCards.appendChild(makeCard)
+    });
+});
